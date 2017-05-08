@@ -6,7 +6,7 @@ clone by<https://github.com/TheOne1006/es6-express>
 
 #### 要求
 
-  * Docker/docker-compose
+  * Docker/docker-compose(本地 Mongodb 数据库时使用)
   * Mac OS X, Windows, or Linux
   * Yarn package + Node.js v6.5 +
 
@@ -47,7 +47,7 @@ clone by<https://github.com/TheOne1006/es6-express>
 ##### 1. 获取项目
 
 ```shell
-$ git clone https://github.com/TheOne1006/es6-express.git MyApp
+$ git clone https://github.com/TheOne1006/BidHub.git MyApp
 $ cd MyApp
 ```
 
