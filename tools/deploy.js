@@ -18,7 +18,7 @@ const remote = {
   name: 'github',
   // 设置自己的 github 地址
   // url: 'https://github.com/<user>/<repo>.git',
-  url: 'https://github.com/TheOne1006/es6-express.git',
+  url: 'https://github.com/TheOne1006/BidHub.git',
   branch: 'gh-pages',
   // 这里不设置 website 信息
   // website: 'https://<user>.github.io/<repo>/',
