@@ -1,0 +1,32 @@
+<% include header %>
+
+  <h1><%-title %></h1>
+  <% products.forEach(function(product) { %>
+    <div class='jumbotron'>
+      <h3><%=product.name %></h3>
+      <p>_id: <%=product._id %></p>
+      <p>sold: <%=product.sold %></p>
+      <p>listPrice: <%=product.listPrice %></p>
+      <p>bidPrice: <%=product.bidPrice %></p>
+      <p>ts: <%= moment(product.ts).format('YYYY-MM-DD HH:mm:ss') %></p>
+      <p>
+        <% if (product.sold == 0) { %>
+          <a href="/product/<%=product._id%>">
+            开始竞标>>
+          </a>
+        <% } else { %>
+          <a href="/product/<%=product._id%>">
+            查看竞标结果>>
+          </a>
+        <% } %>
+      </p>
+      <p>
+        <% if (product.sold == 0) { %>
+          <a href="/publish/<%=product._id%>">
+            修改竞标信息>>
+          </a>
+        <% } %>
+      </p>
+    </div>
+  <% }) %>
+<% include footer %>
