@@ -2,9 +2,16 @@
 
 clone by<https://github.com/TheOne1006/es6-express> 基于个人 扩展的 express kit
 
+heroku地址: <https://bid-hub.herokuapp.com/>
+使用 [mlab.com](https://mlab.com) 免费 mongo 数据库
+
+docker-compose 启动时,使用的是 本地的 mongo
+
 ### 启动开始
 
 ```bash
+# 构建 build
+yarn run build -- --release
 # docker 启动
 docker-compose up -d
 # 浏览器打开 http://localhost:3000/
@@ -16,7 +23,10 @@ docker-compose up -d
 # 可以通过 顶部进入用户个人信息界面
 ```
 
-注意: mockRestData 重置数据后,需要退出重新登录.(暂未设置严格限制, 以及容错处理)
+注意:
+1. mockRestData 重置数据后,需要退出重新登录.(暂未设置严格限制, 以及容错处理)
+2. tick 以分钟为节点, 交给 node-cron 处理
+3. 欢迎吐槽,交流
 
 ### 调试启动
 
