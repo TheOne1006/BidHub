@@ -11,6 +11,12 @@ const ProductSchema = new Schema({
   listPrice: { type: Float, min: 0, required: true },
   bidPrice: { type: Float, min: 0 },
   ts: { type: Number, default: Date.now, timestamps: true },
+  tenderList: [
+    {
+      userId: { type: String, required: true },
+      price: { type: Number, required: true },
+    }],
+  deadline: { type: Number, timestamps: true },
   //发布时间戳
 });
 

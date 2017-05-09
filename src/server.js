@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import logger from 'morgan';
+
+import moment from 'moment';
 // import glob from 'glob';
 import Promise from 'bluebird';
 import routers from './routes';
@@ -28,6 +30,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static('./public'));
+
+app.use((req, res, next) => {
+  res.locals.isLogin = false;
+  res.locals.username = '';
+  res.locals.userId = '';
+  res.locals.moment = moment;
+  const { username, userId } = req.cookies;
+  if (username && userId) {
+    res.locals.isLogin = true;
+    res.locals.username = username;
+    res.locals.userId = userId;
+  }
+  next();
+});
 
 routers(app);
 

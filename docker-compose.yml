@@ -1,0 +1,10 @@
+mongoserver:
+  image: mongo:latest
+server:
+  build: ./
+  links:
+    - mongoserver:mongoserver
+  ports:
+    - 3000:3000
+  environment:
+    - db=mongoserver

@@ -3,7 +3,7 @@ import productModel from '../models/product';
 
 const mockUsers = [{
   username: '小明',
-  walet: 2.11,
+  walet: 22.11,
 }, {
   username: '李雷',
   walet: 33333.11,

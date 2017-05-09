@@ -1,8 +1,36 @@
 ## BidHub
 
-clone by<https://github.com/TheOne1006/es6-express>
+clone by<https://github.com/TheOne1006/es6-express> 基于个人 扩展的 express kit
 
-### Getting Started 入门
+### 启动开始
+
+```bash
+# docker 启动
+docker-compose up -d
+# 浏览器打开 http://localhost:3000/
+
+# 访问 http://localhost:3000/mockRestData 重置所有测试数据
+# http://localhost:3000/list 访问连接
+# 通过 "开始竞标" 按钮 介入竞标, 填写竞价
+# 通过 "修改竞标信息>>" 按钮, 可以设置结束之间, 结束之后,
+# 可以通过 顶部进入用户个人信息界面
+```
+
+注意: mockRestData 重置数据后,需要退出重新登录.(暂未设置严格限制, 以及容错处理)
+
+### 调试启动
+
+```bash
+yarn start
+# 浏览器打开 http://localhost:3001/
+
+# 打包
+yarn run build -- --release
+```
+
+#### homework 说明
+
+
 
 #### 要求
 
